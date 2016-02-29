@@ -1,2 +1,2 @@
-# ud-oms-mongoDB-project
-udacity submission for the OpenStreetMaps (OSM) mongoDB
+# ud-osm-mongoDB
+udacity submission for OSM mongoDB data wrangling
