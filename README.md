@@ -1,2 +1,2 @@
 # ud-oms-mongoDB-project
-udacity submission for the OMS mongoDB
+udacity submission for the OpenStreetMaps (OMS) mongoDB
