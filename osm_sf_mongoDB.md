@@ -1,5 +1,5 @@
-#An Examination of the OpenStreetMap (OMS) area of San Francisco, CA with MongoDB 
-###OMS Map Area
+#An Examination of the OpenStreetMap (OSM) area of San Francisco, CA with MongoDB 
+###OSM Map Area
 The map is from here:  
 
 +  https://www.openstreetmap.org/relation/396487
@@ -8,7 +8,7 @@ I chose this area because I live in San Francisco and I am familiar with the are
 
 + (OSM XML 41.6MB compressed; 658.1MB uncompressed). 
  
-### Problems Encountered in the OMS
+### Problems Encountered in the OSM
 A reduced data set was created by utilizing the provided code that extracts every 10th level element.  The number of elements and the names of the elements in the reduced data set are below: 
 ```
 {'member': 3526,
@@ -113,7 +113,7 @@ list(top_contributors = list(sf_sources(db, top_contributor()))
 ##Additional Ideas
 Though the data set is incomplete, it holds potential for use in: (1) targeted marketing, (2) city and government planning, (3) gamification, and (4) route planning.  
 
-Marketers could utilize the maps to understand community demographics and scarcities in real-time to optimize marketing campaigns.  Likewise, city and government planning could use the data to zone districts for hospitals, public facilities, residential areas based on real-time input.  As the example OMS project alluded to, gamification could be done to increase participation such as the checking-in phenomena which earns badges or prizes. And last but not least, planned routes for long distance bicycle touring, trekking, etc. associated with nearby services would benefit from a real-time ever evolving data set.  
+Marketers could utilize the maps to understand community demographics and scarcities in real-time to optimize marketing campaigns.  Likewise, city and government planning could use the data to zone districts for hospitals, public facilities, residential areas based on real-time input.  As the example OSM project alluded to, gamification could be done to increase participation such as the checking-in phenomena which earns badges or prizes. And last but not least, planned routes for long distance bicycle touring, trekking, etc. associated with nearby services would benefit from a real-time ever evolving data set.  
 
 A way to improve the data set is by having a more complete and consistent data set that would facilitate the future uses above.  A preemptive data set cleansing before the analyst cleanses the data would be beneficial.  The additional ways to analyze the data set are regionally, continentally, or internationally.  I could analyze the data by local neighborhood and compare that to the city statistics or compare the city to another city in the same continent or that is internationally located.  The benefits of implementing the improvements are that more people could readily analyze the data faster or other services could use them as well.  An anticipated problem with implementing the improvement is allocating man-hours.  Given no incentive to contribute, some rather not contribute to cleaning up the data set for analysts.  Since the data set was taken from an open source, the comparison of local city statistics to an international city may be complicated by local naming conventions. 
 
