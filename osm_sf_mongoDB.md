@@ -45,7 +45,7 @@ k= addr.source:housenumber
 Sign Legen (above) looks to be short for Sign Legend.  Two data sets exist on Mapzen: one for San Francisco, and another one for the San Francisco Bay.  I downloaded the San Francisco data set but it appears to consist of regions outside of San Francisco, as the Lydian Academy is located south of San Francisco based on GPS coordinates.  Nevertheless, these problemchars were barred entry into the JSON output file.  My reason for exclusion is that the ‘problemchar’ data is superfluous when compared to the majority of the data, meaning that little would be gleaned from inclusion. 
 
 Running python code on the “addr:street” keys of the reduced data set, I noticed that some of the entries were not capitalized such as “street” and “avenue." These were corrected.  I noticed a misspelling such as “Abenue” that I corrected; and I noticed over abbreviations such  as “W 25th Ave” and “W & E Of Us 101 N of Seminary Avenue” that I changed to “West 25th Avenue” and “West and East Of US 101 North of Seminary Avenue”, respectively.  The changes were accomplished by handing the addresses in python:
-```
+```python
 def fix_abbrev(name, list1, list2):
         name_array = name.split()
         for index, item in enumerate(name_array):
@@ -76,7 +76,7 @@ A table of relevant statistics using MongoDB queries:
 |Number of Users Appearing Once|316|
 
 The MongoDB queries used: 
-```
+```python
 db.sf.find().count() 
 db.sf.find({"type":"node"}).count()
 db.sf.find({"type":"way"}).count()
@@ -100,7 +100,7 @@ The top five contributors to the reduced data set were:
  {u'_id': u'KindredCoda', u'count': 13555}]
 ```
 User `edieyes` has contributed 71,076 entries; this seems exorbitant.  An examination of time span of the user’s first entry timestamp (2014-01-10) and last entry timestamp (2015-08-17) reveal that the user created the 71,076 entries in approximately a little more than a year and half, meaning that the user was generating ~5 entries/hour.  He or she seems like an above-and-beyond contributor.   Here is the MongoDB query: 
-```
+```python
 def top_contributor():
     pipeline = [{"$group":{'_id': '$created.user','count':{'$sum': 1}}},
                 {"$sort": {'count': -1}},
@@ -180,5 +180,3 @@ YAAAAAAS!  It looks like 'yes' is the most popular entry for a building.
 
 ##Conclusion
 Though the data set seems to be incomplete and needs editing, which could be expected from a community data set, the data munging objective was met by exporting data, cleaning that data, importing that data into MongoDB, and then querying the database for insights.  As data munging is an new endeavor for me, I am surprised that a lot of the processes of exporting and importing data are not automated or at least my scope into this endeavor is limited that I am unaware of the automation at hand to streamline these tasks.  The New York Times article provided insight and the learn-by-doing provided practice.  
-
-> Written with [StackEdit](https://stackedit.io/).
