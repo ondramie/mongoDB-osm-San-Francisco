@@ -1,5 +1,5 @@
-#An Examination of the OpenStreetMap (OSM) area of San Francisco, CA with MongoDB 
-###OSM Map Area
+# An Examination of the OpenStreetMap (OSM) area of San Francisco, CA with MongoDB 
+### OSM Map Area
 The map is from here:  
 
 +  https://www.openstreetmap.org/relation/396487
@@ -110,7 +110,7 @@ def top_contributor():
 list(top_contributors = list(sf_sources(db, top_contributor()))
 ```
 
-##Additional Ideas
+## Additional Ideas
 Though the data set is incomplete, it holds potential for use in: (1) targeted marketing, (2) city and government planning, (3) gamification, and (4) route planning.  
 
 Marketers could utilize the maps to understand community demographics and scarcities in real-time to optimize marketing campaigns.  Likewise, city and government planning could use the data to zone districts for hospitals, public facilities, residential areas based on real-time input.  As the example OSM project alluded to, gamification could be done to increase participation such as the checking-in phenomena which earns badges or prizes. And last but not least, planned routes for long distance bicycle touring, trekking, etc. associated with nearby services would benefit from a real-time ever evolving data set.  
@@ -178,5 +178,5 @@ The Top 5 buildings are:
 ```
 YAAAAAAS!  It looks like 'yes' is the most popular entry for a building.   
 
-##Conclusion
+## Conclusion
 Though the data set seems to be incomplete and needs editing, which could be expected from a community data set, the data munging objective was met by exporting data, cleaning that data, importing that data into MongoDB, and then querying the database for insights.  As data munging is an new endeavor for me, I am surprised that a lot of the processes of exporting and importing data are not automated or at least my scope into this endeavor is limited that I am unaware of the automation at hand to streamline these tasks.  The New York Times article provided insight and the learn-by-doing provided practice.  
